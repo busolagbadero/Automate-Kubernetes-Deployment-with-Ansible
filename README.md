@@ -23,5 +23,42 @@ jsonpatch Library: Install the jsonpatch library to support the required functio
 
 ![k84](https://github.com/busolagbadero/Automate-Kubernetes-Deployment-with-Ansible/assets/94229949/a0007fb7-b96b-4b91-8715-4def35bb6ba0)
 
+## ANSIBLE-PLAYBOOK
+Head to the Ansible server to create a playbook for Kubernetes. Initiate the process by using an Ansible playbook to create a namespace named "my-app."
+
+The Ansible playbook targets the local machine, utilizing the k8s module to ensure the presence of a Kubernetes namespace named "my-app" on the cluster.
+
+![k85](https://github.com/busolagbadero/Automate-Kubernetes-Deployment-with-Ansible/assets/94229949/0827a1ad-ae85-4b3f-bd78-996713c587ef)
+
+
+Modify the 'ansible.cfg' file to include a default host, eliminating the need to explicitly specify it in the command when executing the Ansible playbook.
+
+![k86](https://github.com/busolagbadero/Automate-Kubernetes-Deployment-with-Ansible/assets/94229949/59dcfd73-fb42-4420-8f0c-1014e40e70af)
+
+![k813](https://github.com/busolagbadero/Automate-Kubernetes-Deployment-with-Ansible/assets/94229949/b3a3544f-4f7e-430b-977c-1c4bfc760ec9)
+
+![k87](https://github.com/busolagbadero/Automate-Kubernetes-Deployment-with-Ansible/assets/94229949/641d8a6a-1c7f-4fc6-8b28-6f16f18521c5)
+
+## DEPLOY NGINX APP
+
+![k88](https://github.com/busolagbadero/Automate-Kubernetes-Deployment-with-Ansible/assets/94229949/c6f5369e-0794-4266-8dca-c629d0ede975)
+
+The provided Ansible playbook snippet titled "Deploy NGINX app" uses the k8s module to facilitate the deployment of an NGINX application on an Amazon EKS cluster. The playbook specifies the source file for the Kubernetes resource definition (/home/ubuntu/nginx.yaml), sets the desired state to "present" to ensure the NGINX app is deployed, and designates the target namespace as "my-app."
+
+![k89](https://github.com/busolagbadero/Automate-Kubernetes-Deployment-with-Ansible/assets/94229949/84197d0a-7317-4f3d-949c-ed5177c5f559)
+
+![k810](https://github.com/busolagbadero/Automate-Kubernetes-Deployment-with-Ansible/assets/94229949/ae6473ac-213f-408f-9b38-8a27245accd1)
+
+![k811](https://github.com/busolagbadero/Automate-Kubernetes-Deployment-with-Ansible/assets/94229949/b4e10581-ee9e-48a5-90c3-bcd797184cd8)
+
+To eliminate the need for repetitive specification of the kubeconfig file in each task of the playbook, I exported the file location using the command `export K8S_AUTH_KUBECONFIG=the_location_of_ .kube/config`. Subsequently, I reran the playbook to confirm its successful execution.
+
+![k812](https://github.com/busolagbadero/Automate-Kubernetes-Deployment-with-Ansible/assets/94229949/d1d55f7a-a12e-42d0-be51-449bd0af483c)
+
+
+
+
+
+
 
 
